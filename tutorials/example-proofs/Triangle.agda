@@ -1,3 +1,4 @@
+{-# OPTIONS --erasure --no-projection-like #-}
 module Triangle where
 
 open import Haskell.Prelude

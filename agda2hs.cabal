@@ -3,17 +3,33 @@ name:                agda2hs
 version:             1.5
 license:             BSD-3-Clause
 license-file:        LICENSE
-author:              Ulf Norell, Jesper Cockx, Orestis Melkonian, Sára Juhošová, James Chapman, Lucas Escot, Henry Blanchette, Viktor Csimma, Aleksander Wolska, Paul Bittner, Andreas Källberg, Bohdan Liesnikov, Jakob Naucke, Heinrich Apfelmus, Andreas Abel, and Copilot
-maintainer:          jesper@sikanda.be
-copyright:           2025 Ulf Norell, Jesper Cockx, Orestis Melkonian, Sára Juhošová, James Chapman, Lucas Escot, Henry Blanchette, Viktor Csimma, Aleksander Wolska, Paul Bittner, Andreas Källberg, Bohdan Liesnikov, Jakob Naucke, Heinrich Apfelmus, Andreas Abel, and Copilot
+author:              Qu Zhuoyuan 
+maintainer:          quzhuoyuan@gmail.com
+copyright:           2025 Qu Zhuoyuan
 category:            Language, Compiler
 build-type:          Simple
-synopsis:            Compiling Agda code to readable Haskell.
+synopsis:            Compiling Agda code to readable MoonBit.
 description:
-  Produces verified and readable Haskell code by extracting it from a
+  Produces verified and readable MoonBit code by extracting it from a
   (lightly annotated) Agda program.
-  The tool is implemented as an Agda backend, which means that `agda2hs` is a
-  fully functional Agda compiler.
+  
+  The whole project is based on agda2hs, a great work by 
+  Ulf Norell, 
+  Jesper Cockx, 
+  Orestis Melkonian, 
+  Sára Juhošová, 
+  James Chapman, 
+  Lucas Escot, 
+  Henry Blanchette, 
+  Viktor Csimma, 
+  Aleksander Wolska, 
+  Paul Bittner, 
+  Andreas Källberg, 
+  Bohdan Liesnikov, 
+  Jakob Naucke, 
+  Heinrich Apfelmus, 
+  Andreas Abel, 
+  and Copilot
 
 extra-doc-files:    CHANGELOG.md
                     README.md
@@ -59,7 +75,27 @@ executable agda2hs
                        Agda2Hs.Pragma,
                        Agda2Hs.Render,
                        AgdaInternals,
-                       Paths_agda2hs
+                       Paths_agda2hs,
+
+                       Language.MoonBit.Syntax,
+                       Language.MoonBit.Pretty,
+                       Language.MoonBit
+                       Agda2Mbt.Compile.Types
+                       Agda2Mbt.AgdaUtils,
+                       Agda2Mbt.Main,
+                       Agda2Mbt.Compile,
+                       Agda2Mbt.Config,
+                       Agda2Mbt.Pragma, 
+                       Agda2Mbt.Render,
+                       Agda2Mbt.Compile.Term,
+                       Agda2Mbt.Compile.Type,
+                       Agda2Mbt.Compile.Function,
+                       Agda2Mbt.Compile.Data,
+                       Agda2Mbt.Compile.Name,
+                       Agda2Mbt.Compile.Var,
+                       Agda2Mbt.Compile.Utils
+                       Agda2Mbt.Compile.Ctx
+                       Agda2Mbt.DraftTest
   autogen-modules:     Paths_agda2hs
   build-depends:       base                 >= 4.13    && < 4.22,
                        Agda                 >= 2.8.0   && < 2.9.0,

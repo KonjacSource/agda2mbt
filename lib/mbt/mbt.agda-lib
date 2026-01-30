@@ -1,0 +1,4 @@
+name: mbt
+depend:
+include: .
+flags: -W noUnsupportedIndexedMatch --erasure --no-projection-like

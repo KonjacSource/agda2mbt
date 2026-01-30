@@ -434,6 +434,7 @@ checkInlinePragma def@(Defn { defName = q , theDef = df }) = do
   let qs = fromMaybe [] $ getMutual_ df
   addInlineSymbols $ q : qs
 
+-- *** Called by Compile.hs
 checkCompileToFunctionPragma :: Definition -> String -> C ()
 checkCompileToFunctionPragma def s = noCheckNames $ do
   r <- resolveStringName s
